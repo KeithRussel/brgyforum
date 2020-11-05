@@ -1,0 +1,386 @@
+/* Global Styles */
+:root {
+  --primary-color: #2c84e7;
+  --link-color: #489efc;
+  --vanilla-color: #6a88aa;
+  --light-color: #f4f4f4;
+  --danger-color: #dc3545;
+  --success-color: #28a745;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* Utilities */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+}
+
+.round-img {
+  border-radius: 50%;
+}
+
+/* Text Styles */
+.text-center {
+  text-align: center;
+}
+
+.x-large {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.large {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Padding */
+.p {
+  padding: 0.5rem;
+}
+.p-1 {
+  padding: 1rem;
+}
+.p-2 {
+  padding: 2rem;
+}
+.p-3 {
+  padding: 3rem;
+}
+.py {
+  padding: 0.5rem 0;
+}
+.py-1 {
+  padding: 1rem 0;
+}
+.py-2 {
+  padding: 2rem 0;
+}
+.py-3 {
+  padding: 3rem 0;
+}
+
+/* Margin */
+.m {
+  margin: 0.5rem;
+}
+.m-1 {
+  margin: 1rem;
+}
+.m-2 {
+  margin: 2rem;
+}
+.m-3 {
+  margin: 3rem;
+}
+.my {
+  margin: 0.5rem 0;
+}
+.my-1 {
+  margin: 1rem 0;
+}
+.my-2 {
+  margin: 2rem 0;
+}
+.my-3 {
+  margin: 3rem 0;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--light-color);
+  color: #333;
+  padding: 0.4rem 1.3rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+}
+
+/* Color Styles */
+.bg-primary {
+  background-color: #6a88aa;
+}
+
+.alert {
+  padding: 0.8rem;
+  margin: 1rem 0;
+  opacity: 0.9;
+  background: var(--light-color);
+  color: #333;
+}
+
+.btn-danger,
+.bg-danger,
+.badge-danger,
+.alert-danger {
+  background: var(--danger-color);
+  color: #fff;
+}
+
+.btn-success,
+.bg-success,
+.badge-success,
+.alert-success {
+  background: var(--success-color);
+  color: #fff;
+}
+
+.bg-primary,
+.badge-primary,
+.alert-primary {
+  background: var(--vanilla-color);
+  color: #fff;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+/* Header */
+.navbar {
+  padding: 0.7rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h1 a {
+  color: #fff;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li a {
+  padding: 0 1rem;
+  color: #fff;
+}
+
+/* Forms */
+.form {
+  background-color: #6a88aad9;
+  padding: 2rem;
+  margin: 2rem;
+}
+
+.form .form-group {
+  margin: 1.2rem 0;
+}
+
+.form .form-text {
+  display: block;
+  margin-top: 0.3rem;
+  color: #fff;
+}
+
+.form p {
+  color: #fff;
+}
+
+.form p a,
+.form label,
+.form span {
+  color: #fff;
+  font-weight: bold;
+}
+
+.form input[type='text'],
+.form input[type='email'],
+.form input[type='password'],
+.form input[type='date'],
+.form select,
+.form textarea {
+  display: block;
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  transition: width 0.4s ease-in-out;
+}
+
+.form input[type='submit'],
+button {
+  font: inherit;
+}
+
+.post-form .form {
+  background-color: transparent;
+}
+
+.post-form .form > textarea {
+  margin-bottom: 10px;
+}
+
+.social-input {
+  display: flex;
+}
+
+.social-input .fa-twitter,
+.social-input .fa-facebook,
+.social-input .fa-linkedin,
+.social-input .fa-instagram {
+  margin-right: 5px;
+}
+
+.social-input input[type='text'] {
+  width: 30%;
+}
+
+.social-input input[type='text']:focus {
+  width: 100%;
+}
+
+/* Profiles */
+.profiles {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, minmax(40px, auto));
+  grid-gap: 15px;
+}
+
+.profiles .profile {
+  padding: 5px;
+  border-radius: 20px;
+  background-color: aliceblue;
+}
+
+.profiles .profile > div {
+  text-align: center;
+}
+
+.profiles .profile > img {
+  padding: 5px 25px 5px;
+}
+
+/* Single Profile */
+.main-profile {
+  /* grid-template-columns: 1fr 4fr; */
+  /* grid-auto-rows: 40px; */
+  grid-template-columns: 2fr 6fr;
+  display: grid;
+  grid-gap: 10px;
+}
+
+.main-profile .info > p {
+  font-style: italic;
+  font-size: 16px;
+}
+
+.main-profile .info .skills {
+  margin-top: 5px;
+}
+
+.main-profile .info .skills > span {
+  background-color: #ffff0033;
+  font-size: 12px;
+}
+
+.social a {
+  margin: 0.25rem;
+}
+
+.social .fa-facebook-square {
+  color: #1877f2;
+}
+
+.social .fa-twitter-square {
+  color: rgba(29, 161, 242, 1);
+}
+
+.social .fa-instagram-square {
+  color: #d6249f;
+}
+
+.social .fa-linkedin {
+  color: #2867b2;
+}
+
+.social .fa-youtube-square {
+  color: #f00;
+}
+
+/* Posts */
+.post {
+  grid-template-columns: 1fr 4fr;
+  display: grid;
+  /* grid-auto-rows: 40px; */
+  grid-gap: 10px;
+  padding: 15px;
+  background-color: #6a88aa1f;
+  align-items: center;
+  margin-bottom: 1rem;
+  box-shadow: 0px 0px 5px #888888;
+}
+
+.post-user {
+  display: grid;
+  grid-template-columns: 12fr 1fr;
+}
+
+.post-user > button {
+  float: right;
+  border: transparent;
+}
+
+.post-user > button .fa-times-circle {
+  color: var(--danger-color);
+  cursor: pointer;
+}
+
+.post-date {
+  font-size: 0.75rem;
+}
+
+.post button {
+  background: transparent;
+}
+
+.posts button i {
+  color: #1877f2;
+}

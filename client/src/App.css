@@ -346,6 +346,11 @@ button {
 }
 
 /* Posts */
+.posts button i,
+.single-post button i {
+  color: #ffffff;
+}
+
 .post {
   grid-template-columns: 1fr 4fr;
   display: grid;
@@ -354,33 +359,75 @@ button {
   padding: 15px;
   background-color: #6a88aa1f;
   align-items: center;
-  margin-bottom: 1rem;
   box-shadow: 0px 0px 5px #888888;
 }
 
-.post-user {
-  display: grid;
-  grid-template-columns: 12fr 1fr;
+.posts .post-body {
+  margin-bottom: 0.75rem;
+  /* background-color: #6a88aa17;
+  border: 1px solid #6a88aa52; */
 }
 
-.post-user > button {
+.post button {
+  background-color: var(--vanilla-color);
+}
+
+.post-user,
+.comment-user {
+  display: grid;
+  grid-template-columns: 11fr 1fr 1fr;
+}
+
+.post-user > button,
+.comment-user > button {
   float: right;
   border: transparent;
+  background-color: transparent;
 }
 
-.post-user > button .fa-times-circle {
+.post-user > a:nth-child(2) {
+  background-color: transparent;
+}
+
+.post-user > button .fa-times-circle,
+.comment-user > button .fa-times-circle {
   color: var(--danger-color);
   cursor: pointer;
+}
+
+.post-user > button .fa-ellipsis-h {
+  color: var(--vanilla-color);
 }
 
 .post-date {
   font-size: 0.75rem;
 }
 
-.post button {
-  background: transparent;
+/* Comments */
+
+.post-comments {
+  -webkit-transition: 3s;
+  -moz-transition: 3s;
+  -ms-transition: 3s;
+  -o-transition: 3s;
+  transition: 3s;
+  background-color: #6a88aa17;
+  border: 1px solid #6a88aa52;
 }
 
-.posts button i {
-  color: #1877f2;
+.post-comments .form {
+  padding: 0;
+  background-color: transparent;
+}
+
+.post-comments .form > textarea {
+  margin-bottom: 1rem;
+}
+
+.comments {
+  /* grid-template-columns: 1fr 4fr; */
+  grid-template-columns: fit-content(6%) 1fr;
+  display: grid;
+  grid-gap: 10px;
+  padding: 15px;
 }

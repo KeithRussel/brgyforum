@@ -9,6 +9,7 @@ import CreateProfile from '../profile-forms/CreateProfile';
 import Profiles from '../profiles/Profiles';
 import Profile from '../profile/Profile';
 import Posts from '../posts/Posts';
+import Post from '../post/Post';
 
 const Routes = () => {
   return (
@@ -22,6 +23,7 @@ const Routes = () => {
         <PrivateRoute exact path='/profiles' component={Profiles} />
         <PrivateRoute exact path='/profile/:id' component={Profile} />
         <PrivateRoute exact path='/posts' component={Posts} />
+        <PrivateRoute exact path='/posts/:id' component={Post} />
       </Switch>
     </section>
   );

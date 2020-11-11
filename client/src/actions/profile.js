@@ -85,7 +85,12 @@ export const deleteAccount = () => async (dispatch) => {
       dispatch({
         type: ACCOUNT_DELETED,
       });
-    } catch (err) {}
+    } catch (err) {
+      dispatch({
+        type: PROFILE_ERROR,
+        payload: { msg: err.response.statusText, status: err.response.status },
+      });
+    }
   }
 };
 

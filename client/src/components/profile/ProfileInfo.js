@@ -57,10 +57,10 @@ const ProfileInfo = ({
           ) : null}
         </div>
       </div>
-      <div className='activity'>
+      {/* <div className='activity'>
         <button className='btn btn-light'>About</button>
         <button className='btn btn-light'>Post</button>
-      </div>
+      </div> */}
     </Fragment>
   );
 };

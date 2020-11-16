@@ -30,6 +30,13 @@ const Dashboard = ({
               <i className='fas fa-user-circle text-primary'></i> My Profile
             </Link>
           </div>
+          <small>
+            Note: Please proceed to{' '}
+            <a href='https://en.gravatar.com/' target='_blank'>
+              Gravatar
+            </a>{' '}
+            to register your avatar picture{' '}
+          </small>
 
           <div className='my-2'>
             <button className='btn btn-danger' onClick={() => deleteAccount()}>
@@ -40,6 +47,11 @@ const Dashboard = ({
       ) : (
         <Fragment>
           <p>Please fill up some fields for your profile</p>
+          <small>
+            Note: Please proceed to{' '}
+            <Link to='https://en.gravatar.com/'>Gravatar</Link> to register your
+            avatar picture{' '}
+          </small>
           <Link to='/profile-form' className='btn btn-primary my-1'>
             Create Profile
           </Link>

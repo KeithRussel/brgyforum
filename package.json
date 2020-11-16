@@ -1,5 +1,6 @@
 {
   "name": "brgyforum",
+  "description": "Barangay Forum Site",
   "version": "1.0.0",
   "engines": {
     "node": "12.18.0"
@@ -28,14 +29,5 @@
   },
   "keywords": [],
   "author": "Russel Maniacop",
-  "license": "ISC",
-  "description": "",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KeithRussel/brgyforum.git"
-  },
-  "bugs": {
-    "url": "https://github.com/KeithRussel/brgyforum/issues"
-  },
-  "homepage": "https://github.com/KeithRussel/brgyforum#readme"
+  "license": "ISC"
 }

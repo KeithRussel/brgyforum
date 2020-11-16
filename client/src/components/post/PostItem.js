@@ -48,20 +48,29 @@ const PostItem = ({
             <div>
               {showActions && (
                 <Fragment>
-                  <button
-                    onClick={(e) => singleAddLike(_id)}
-                    className='btn btn-light'
-                    type='button'
-                  >
-                    <i className='fa fa-thumbs-up'></i>
-                  </button>
-                  <button
-                    onClick={(e) => singleRemoveLike(_id)}
-                    className='btn btn-light'
-                    type='button'
-                  >
-                    <i className='fa fa-thumbs-down'></i>
-                  </button>
+                  {/* {likes ? likes.map((like) => like.user) : null} */}
+                  {/* {!auth.loading &&
+                  likes.filter((like) => auth.user._id.includes(like.user))
+                    ? 'true'
+                    : 'false'} */}
+                  {!auth.loading &&
+                  likes.some(({ user }) => user === auth.user._id) ? (
+                    <button
+                      onClick={(e) => singleRemoveLike(_id)}
+                      className='btn btn-light heart'
+                      type='button'
+                    >
+                      <i className='fa fa-heart heart-red'></i>
+                    </button>
+                  ) : (
+                    <button
+                      onClick={(e) => singleAddLike(_id)}
+                      className='btn btn-light heart'
+                      type='button'
+                    >
+                      <i className='fa fa-heart'></i>
+                    </button>
+                  )}
                 </Fragment>
               )}
             </div>

@@ -1,5 +1,5 @@
 {
-  "name": "dagupanjobposting",
+  "name": "brgyforum",
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
@@ -23,7 +23,15 @@
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
-  "author": "",
+  "author": "Russel Maniacop",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KeithRussel/brgyforum.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KeithRussel/brgyforum/issues"
+  },
+  "homepage": "https://github.com/KeithRussel/brgyforum#readme"
 }

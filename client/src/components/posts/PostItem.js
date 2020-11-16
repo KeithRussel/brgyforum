@@ -65,20 +65,25 @@ const PostItem = ({
             <div>
               {showActions && (
                 <Fragment>
-                  <button
-                    onClick={(e) => addLike(_id)}
-                    className='btn btn-light'
-                    type='button'
-                  >
-                    <i className='fa fa-thumbs-up'></i>
-                  </button>
-                  <button
-                    onClick={(e) => removeLike(_id)}
-                    className='btn btn-light'
-                    type='button'
-                  >
-                    <i className='fa fa-thumbs-down'></i>
-                  </button>
+                  {!auth.loading &&
+                  likes.some(({ user }) => user === auth.user._id) ? (
+                    <button
+                      onClick={(e) => removeLike(_id)}
+                      className='btn btn-light heart'
+                      type='button'
+                    >
+                      <i className='fa fa-heart heart-red'></i>
+                    </button>
+                  ) : (
+                    <button
+                      onClick={(e) => addLike(_id)}
+                      className='btn btn-light heart'
+                      type='button'
+                    >
+                      <i className='fa fa-heart'></i>
+                    </button>
+                  )}
+
                   <button
                     className='btn btn-primary'
                     onClick={() => toggleShowComments(!showComments)}

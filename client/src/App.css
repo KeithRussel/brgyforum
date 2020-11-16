@@ -351,6 +351,16 @@ button {
   color: #ffffff;
 }
 
+.posts button .fa-heart,
+.single-post button .fa-heart {
+  color: #333;
+}
+
+.posts button i.heart-red,
+.single-post button i.heart-red {
+  color: var(--danger-color);
+}
+
 .post {
   grid-template-columns: 1fr 4fr;
   display: grid;
@@ -370,6 +380,10 @@ button {
 
 .post button {
   background-color: var(--vanilla-color);
+}
+
+.post button.heart {
+  background-color: transparent;
 }
 
 .post-user,

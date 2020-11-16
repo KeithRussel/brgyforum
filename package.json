@@ -4,7 +4,7 @@
   "engines": {
     "node": "12.18.0"
   },
-  "main": "index.js",
+  "main": "server.js",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "config": "^3.3.2",

@@ -32,7 +32,7 @@ const Dashboard = ({
           </div>
           <small>
             Note: Please proceed to{' '}
-            <a href='https://en.gravatar.com/' target='_blank'>
+            <a href='https://en.gravatar.com/' target='_blank' rel='noreferrer'>
               Gravatar
             </a>{' '}
             to register your avatar picture{' '}
@@ -49,8 +49,10 @@ const Dashboard = ({
           <p>Please fill up some fields for your profile</p>
           <small>
             Note: Please proceed to{' '}
-            <Link to='https://en.gravatar.com/'>Gravatar</Link> to register your
-            avatar picture{' '}
+            <a href='https://en.gravatar.com/' target='_blank' rel='noreferrer'>
+              Gravatar
+            </a>{' '}
+            to register your avatar picture{' '}
           </small>
           <Link to='/profile-form' className='btn btn-primary my-1'>
             Create Profile

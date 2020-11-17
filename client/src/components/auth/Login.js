@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import { connect } from 'react-redux';
-import { Link, Redirect } from 'react-router-dom';
+import { Link, Redirect, useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { login } from '../../actions/auth';
 
@@ -20,10 +20,16 @@ const Login = ({ login, isAuthenticated }) => {
     login(email, password);
   };
 
+  // const history = useHistory();
+
   // Redirect if logged in
   if (isAuthenticated) {
     return <Redirect to='/dashboard' />;
   }
+
+  // if (isAuthenticated) {
+  //   history.push('/dashboard');
+  // }
 
   return (
     <Fragment>
@@ -54,7 +60,8 @@ const Login = ({ login, isAuthenticated }) => {
           <input type='submit' value='Login' className='btn btn-primary' />
         </div>
         <p className='my-1 text-center'>
-          Don't have an accout? <Link to='/login'>Register your account</Link>
+          Don't have an accout?{' '}
+          <Link to='/register'>Register your account</Link>
         </p>
       </form>
     </Fragment>

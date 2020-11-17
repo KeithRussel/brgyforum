@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import { connect } from 'react-redux';
-import { Link, Redirect } from 'react-router-dom';
+import { Link, Redirect, useHistory } from 'react-router-dom';
 import { setAlert } from '../../actions/alert';
 import { register } from '../../actions/auth';
 import PropTypes from 'prop-types';
@@ -28,9 +28,15 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     }
   };
 
+  // const history = useHistory();
+
   if (isAuthenticated) {
     return <Redirect to='/dashboard' />;
   }
+
+  // if (isAuthenticated) {
+  //   history.push('/dashboard');
+  // }
 
   return (
     <Fragment>
@@ -95,7 +101,7 @@ Register.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  isAuthenticated: state.auth.isAthenticated,
+  isAuthenticated: state.auth.isAuthenticated,
 });
 
 export default connect(mapStateToProps, { setAlert, register })(Register);

@@ -10,15 +10,13 @@ connectDB();
 // Initialize Middleware
 app.use(express.json({ extended: false }));
 
-// app.get('/', (req, res) => res.send('API Running'));
-
 // Define Routes
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/auth', require('./routes/api/auth'));
 app.use('/api/profile', require('./routes/api/profile'));
 app.use('/api/posts', require('./routes/api/posts'));
 
-// Server static assets in production
+// Serve static assets in production
 if (process.env.NODE_ENV === 'production') {
   // Set static folder
   app.use(express.static('client/build'));

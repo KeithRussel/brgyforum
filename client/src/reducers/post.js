@@ -1,4 +1,5 @@
 import {
+  LOADMORE_POSTS,
   GET_POSTS,
   POST_ERROR,
   UPDATE_LIKES,
@@ -15,6 +16,7 @@ import {
 const initialState = {
   posts: [],
   post: null,
+  visible: 0,
   loading: true,
   error: {},
 };
@@ -24,10 +26,19 @@ export default function (state = initialState, action) {
   const { type, payload } = action;
 
   switch (type) {
+    case LOADMORE_POSTS:
+      return {
+        ...state,
+        posts: payload,
+        visible: state.visible + 2,
+        post: null,
+        loading: false,
+      };
     case GET_POSTS:
       return {
         ...state,
         posts: payload,
+        visible: state.visible + 2,
         post: null,
         loading: false,
       };

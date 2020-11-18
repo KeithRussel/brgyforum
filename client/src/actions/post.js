@@ -7,12 +7,29 @@ import {
   REMOVE_COMMENT_ARRAY,
   ADD_POST,
   DELETE_POST,
+  LOADMORE_POSTS,
   GET_POSTS,
   GET_POST,
   POST_ERROR,
   UPDATE_LIKES,
   SINGLE_POST_UPDATE_LIKES,
 } from './types';
+
+export const loadmorePosts = () => async (dispatch) => {
+  try {
+    const res = await api.get('/posts');
+
+    dispatch({
+      type: LOADMORE_POSTS,
+      payload: res.data,
+    });
+  } catch (err) {
+    dispatch({
+      type: POST_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status },
+    });
+  }
+};
 
 // Get all posts
 export const getPosts = () => async (dispatch) => {

@@ -30,13 +30,19 @@ const Dashboard = ({
               <i className='fas fa-user-circle text-primary'></i> My Profile
             </Link>
           </div>
-          <small>
-            Note: Please proceed to{' '}
-            <a href='https://en.gravatar.com/' target='_blank' rel='noreferrer'>
-              Gravatar
-            </a>{' '}
-            to register your avatar picture{' '}
-          </small>
+          <div style={{ marginTop: '1rem' }}>
+            <small>
+              Note: Please proceed to{' '}
+              <a
+                href='https://en.gravatar.com/'
+                target='_blank'
+                rel='noreferrer'
+              >
+                Gravatar
+              </a>{' '}
+              to register your avatar picture{' '}
+            </small>
+          </div>
 
           <div className='my-2'>
             <button className='btn btn-danger' onClick={() => deleteAccount()}>
@@ -47,13 +53,20 @@ const Dashboard = ({
       ) : (
         <Fragment>
           <p>Please fill up some fields for your profile</p>
-          <small>
-            Note: Please proceed to{' '}
-            <a href='https://en.gravatar.com/' target='_blank' rel='noreferrer'>
-              Gravatar
-            </a>{' '}
-            to register your avatar picture{' '}
-          </small>
+          <div style={{ marginTop: '1rem' }}>
+            <small>
+              Note: Please proceed to{' '}
+              <a
+                href='https://en.gravatar.com/'
+                target='_blank'
+                rel='noreferrer'
+              >
+                Gravatar
+              </a>{' '}
+              to register your avatar picture{' '}
+            </small>
+          </div>
+
           <Link to='/profile-form' className='btn btn-primary my-1'>
             Create Profile
           </Link>

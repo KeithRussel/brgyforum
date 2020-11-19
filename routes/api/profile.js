@@ -8,6 +8,7 @@ const normalize = require('normalize-url');
 
 const Profile = require('../../models/Profile');
 const User = require('../../models/User');
+const Post = require('../../models/Post');
 
 // @route   GET api/profile/me
 // @desc    Get current users profile
@@ -126,6 +127,7 @@ router.get('/user/:user_id', async (req, res) => {
 // @access  Private
 router.delete('/', auth, async (req, res) => {
   try {
+    // const post = await Post.findById(req.params.id); // Get the post
     // Remove profile
     await Profile.findOneAndRemove({
       user: req.user.id,
@@ -134,6 +136,28 @@ router.delete('/', auth, async (req, res) => {
     await User.findByIdAndRemove({
       _id: req.user.id,
     });
+
+    // Remove user posts
+    await Post.deleteMany({ user: req.user.id });
+
+    // await Post.deleteMany({ comments: { user: req.user.id } });
+    await Post.updateMany(
+      { comments: [{ user: req.user.id }] },
+      { $pullAll: { comments: [{ user: req.user.id }] } },
+      { multi: true },
+      function (err, data) {
+        console.log(err, data);
+      }
+    );
+
+    // await User.findByIdAndRemove(
+    //   {
+    //     comments: [{ user: req.user.id }],
+    //   },
+    //   function (err, data) {
+    //     console.log(err, data);
+    //   }
+    // );
 
     res.json({ msg: 'User deleted' });
   } catch (err) {

@@ -33,7 +33,7 @@ const PostItem = ({
 
   return (
     <Fragment>
-      <div className='post-body'>
+      <div className='post-body fade-in'>
         <div className='post'>
           <div>
             <Link to={`/profile/${user}`}>

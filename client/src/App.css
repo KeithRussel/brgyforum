@@ -356,6 +356,13 @@ button {
   color: #ffffff;
 }
 
+.posts .loadmore {
+  display: block;
+  border: 1px solid #c7c7c7;
+  margin: 1em auto;
+  padding: 0.75em 1em;
+}
+
 .posts button .fa-heart,
 .single-post button .fa-heart {
   color: #333;
@@ -420,6 +427,23 @@ button {
 
 .post-date {
   font-size: 0.75rem;
+}
+
+.fade-in {
+  animation: fadeIn ease 0.5s;
+  -webkit-animation: fadeIn ease 0.5s;
+  -moz-animation: fadeIn ease 0.5s;
+  -o-animation: fadeIn ease 0.5s;
+  -ms-animation: fadeIn ease 0.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* Comments */

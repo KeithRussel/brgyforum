@@ -30,7 +30,11 @@ const Posts = ({
           <PostItem key={post._id} post={post} />
         ))}
         {visible < posts.length && (
-          <button type='button' className='btn btn-light' onClick={loadMore}>
+          <button
+            type='button'
+            className='btn btn-light loadmore'
+            onClick={loadMore}
+          >
             Load more
           </button>
         )}

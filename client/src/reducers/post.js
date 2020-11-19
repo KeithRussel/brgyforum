@@ -46,6 +46,7 @@ export default function (state = initialState, action) {
       return {
         ...state,
         post: payload,
+        visible: 0,
         loading: false,
       };
     case ADD_POST:

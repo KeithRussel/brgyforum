@@ -1,6 +1,7 @@
 ﻿# Barangay Forum
 
 Barangay Forum is a website app where the users can post their complaint or suggestions to their barangay, so they can make their place better and peaceful.
+Check the [sample link](https://murmuring-everglades-39775.herokuapp.com/)
 
 ![](brgyforum.gif)
 
